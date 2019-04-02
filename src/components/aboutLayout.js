@@ -25,7 +25,6 @@ const AboutLayout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div class="content">{children}</div>
         <footer>
           <p>Copyright &copy; 2019 Glanzrock Productions</p>
         </footer>

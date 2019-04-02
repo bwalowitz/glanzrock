@@ -7,13 +7,11 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
+import Header from "./header.js";
 
 import "./reset.css";
 import "./layout.css";
-
-import glanzrockNameWhite from "../images/glanzrock-name-white.png";
-import glanzrock3dBg from "../images/glanzrock-3d-bg.jpg";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,33 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="sticky">
-          <header>
-            <a href="index.html">
-              <img src={glanzrockNameWhite} />
-            </a>
-            <nav>
-              <a href="#projects">Projects</a>
-              <a href="about.html">About</a>
-              <a href="news.html">News</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-          </header>
-        </div>
-        <div className="content">
-          <div className="container">
-            <img
-              className="home-logo"
-              src={glanzrock3dBg}
-              alt="glanzrock logo"
-            />
-            {children}
-          </div>
-        </div>
-
-        <footer>
-          <p>Copyright &copy; 2019 Glanzrock Productions</p>
-        </footer>
+        <div className="content">{children}</div>
       </>
     )}
   />

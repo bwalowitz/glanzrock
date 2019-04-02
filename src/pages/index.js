@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+
+import glanzrock3dBg from "../images/glanzrock-3d-bg.jpg";
 
 const IndexPage = () => (
   <Layout>
+    <Header />
+    <img className="home-logo" src={glanzrock3dBg} alt="glanzrock logo" />
     <div className="back-black">
       <section className="project home">
         <div className="flex">
@@ -18,7 +24,7 @@ const IndexPage = () => (
               flight.
             </p>
             <p className="learnabout">
-              <a href="about.html">Learn more</a>
+              <Link to="/about">Learn more</Link>
             </p>
           </div>
         </div>
@@ -30,7 +36,7 @@ const IndexPage = () => (
       <div className="feature-grid">
         <figure className="item">
           <a href="changingthegame.html">
-            <img src="img/tentcity-poster.png" />
+            <img src="images/tentcity-poster.png" />
             <figcaption className="item-caption">
               <p>Tent City</p>
             </figcaption>
@@ -39,7 +45,7 @@ const IndexPage = () => (
 
         <figure className="item">
           <a href="changingthegame.html">
-            <img src="img/tentcity-poster.png" />
+            <img src="images/tentcity-poster.png" />
             <figcaption className="item-caption">
               <p>Changing The Game</p>
             </figcaption>
@@ -47,7 +53,7 @@ const IndexPage = () => (
         </figure>
         <figure className="item">
           <a href="changingthegame.html">
-            <img src="img/tentcity-poster.png" />
+            <img src="images/tentcity-poster.png" />
             <figcaption className="item-caption">
               <p>Here Are The Young Men</p>
             </figcaption>
@@ -55,7 +61,7 @@ const IndexPage = () => (
         </figure>
         <figure className="item">
           <a href="changingthegame.html">
-            <img src="img/tentcity-poster.png" />
+            <img src="images/tentcity-poster.png" />
             <figcaption className="item-caption">
               <p>1989</p>
             </figcaption>
@@ -63,7 +69,7 @@ const IndexPage = () => (
         </figure>
         <figure className="item">
           <a href="changingthegame.html">
-            <img src="img/tentcity-poster.png" />
+            <img src="images/tentcity-poster.png" />
             <figcaption className="item-caption">
               <p>Dark As Night</p>
             </figcaption>
@@ -71,6 +77,7 @@ const IndexPage = () => (
         </figure>
       </div>
     </section>
+    <Footer />
   </Layout>
 );
 
