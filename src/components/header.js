@@ -7,7 +7,7 @@ const Header = () => (
   <div className="sticky">
     <header>
       <Link to="/">
-        <img src={glanzrockNameWhite} />
+        <img src={glanzrockNameWhite} alt="glanzrock" />
       </Link>
       <nav>
         <Link to="/#projects">Projects</Link>

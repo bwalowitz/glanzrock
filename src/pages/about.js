@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import Header from "../components/header";
@@ -66,7 +65,7 @@ const About = () => (
 
     <section class="logo-flex white">
       <div class="team-text">
-        <img src={headshot} />
+        <img src={headshot} alt="Andrew Gans headshot" />
         <h3 class="name">Andrew Davies Gans</h3>
         <h3 class="title">Founder | CEO</h3>
         <p>

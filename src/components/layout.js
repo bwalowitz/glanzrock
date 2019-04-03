@@ -7,8 +7,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql, Link } from "gatsby";
-import Header from "./header.js";
+import { StaticQuery, graphql } from "gatsby";
 
 import "./reset.css";
 import "./layout.css";
