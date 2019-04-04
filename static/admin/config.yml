@@ -39,6 +39,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "News Article Title", name: "title", widget: "string" }
+      - {
+          label: "News Article Date",
+          name: "date",
+          widget: "date",
+          format: "MMMM D, YYYY",
+        }
       - { label: "News Article Source", name: "source", widget: "string" }
       - { label: "News Article URL", name: "url", widget: "string" }
       - { label: "News Article Image", name: "image", widget: "image" }

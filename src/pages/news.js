@@ -14,7 +14,7 @@ const ALL_NEWS_QUERY = graphql`
         node {
           frontmatter {
             title
-            date(formatString: "MMMM D, YYYY")
+            date
             url
             source
           }
