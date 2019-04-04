@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: gatsby-cms
+  branch: master
   repo: bwalowitz/glanzrock
 
 media_folder: static/img
