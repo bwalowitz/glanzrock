@@ -9,7 +9,7 @@ import Lightbox from "react-images";
 export default class projectLayout extends Component {
   constructor(props) {
     super(props);
-    this.state = { lightboxIsOpen: false };
+    this.state = { lightboxIsOpen: false, currentImage: 0 };
   }
   render() {
     const { markdownRemark } = this.props.data;
@@ -27,6 +27,18 @@ export default class projectLayout extends Component {
     const openLightbox = () => {
       this.setState({
         lightboxIsOpen: true
+      });
+    };
+
+    const nextImage = () => {
+      this.setState({
+        currentImage: this.state.currentImage + 1
+      });
+    };
+
+    const prevImage = () => {
+      this.setState({
+        currentImage: this.state.currentImage - 1
       });
     };
 
@@ -53,7 +65,7 @@ export default class projectLayout extends Component {
               ) : (
                 ""
               )}
-              <div class="category">
+              <div className="category">
                 <p>{markdownRemark.frontmatter.category}</p>
               </div>
             </div>
@@ -61,8 +73,9 @@ export default class projectLayout extends Component {
               <Lightbox
                 images={images}
                 isOpen={this.state.lightboxIsOpen}
-                onClickPrev={this.gotoPrevLightboxImage}
-                onClickNext={this.gotoNextLightboxImage}
+                currentImage={this.state.currentImage}
+                onClickPrev={prevImage}
+                onClickNext={nextImage}
                 onClose={closeLightbox}
               />
               <img
