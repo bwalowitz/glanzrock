@@ -4,9 +4,31 @@ import Layout from "./layout";
 import Header from "./header";
 import Footer from "./footer";
 
+import Lightbox from "react-images";
+
 export default class projectLayout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { lightboxIsOpen: false };
+  }
   render() {
     const { markdownRemark } = this.props.data;
+
+    const images = markdownRemark.frontmatter.images.map(image => {
+      return { src: image };
+    });
+
+    const closeLightbox = () => {
+      this.setState({
+        lightboxIsOpen: false
+      });
+    };
+
+    const openLightbox = () => {
+      this.setState({
+        lightboxIsOpen: true
+      });
+    };
 
     return (
       <Layout>
@@ -14,20 +36,40 @@ export default class projectLayout extends Component {
         <section className="project">
           <div className="project-flex">
             <div className="project-text">
-              <h2>{markdownRemark.frontmatter.intro}</h2>
-              <p
-                className="project-synopsis"
-                dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-              />
-              <div className="credit">
-                <h3 className="credit-heading">Credits</h3>
-                <p className="credit-info">Written by Josh Allen</p>
-                <p className="credit-info">Directed by Andrew Fairbanks</p>
-                <p className="credit-info">Produced by Josh Allen</p>
+              <h2>{markdownRemark.frontmatter.title}</h2>
+              <p className="project-synopsis">
+                {markdownRemark.frontmatter.intro}
+              </p>
+              <p>{markdownRemark.frontmatter.description}</p>
+              {markdownRemark.frontmatter.credits.length > 1 ? (
+                <div className="credit">
+                  <h3 className="credit-heading">Credits</h3>
+                  {markdownRemark.frontmatter.credits.map(credit => (
+                    <p className="credit-info" key={credit}>
+                      {credit}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                ""
+              )}
+              <div class="category">
+                <p>{markdownRemark.frontmatter.category}</p>
               </div>
             </div>
             <div className="project-image">
-              <img src="img/TentCity-Poster.png" alt="Tent City Poster" />
+              <Lightbox
+                images={images}
+                isOpen={this.state.lightboxIsOpen}
+                onClickPrev={this.gotoPrevLightboxImage}
+                onClickNext={this.gotoNextLightboxImage}
+                onClose={closeLightbox}
+              />
+              <img
+                src={markdownRemark.frontmatter.poster}
+                alt={`${markdownRemark.frontmatter.title} Poster`}
+                onClick={openLightbox}
+              />
             </div>
           </div>
         </section>
@@ -45,6 +87,10 @@ export const query = graphql`
         title
         intro
         slug
+        poster
+        credits
+        category
+        images
       }
     }
   }

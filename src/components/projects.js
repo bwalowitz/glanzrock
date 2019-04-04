@@ -13,6 +13,7 @@ const ALL_PROJECTS_QUERY = graphql`
             title
             intro
             slug
+            poster
           }
         }
       }

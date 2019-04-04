@@ -15,7 +15,7 @@ const ALL_NEWS_QUERY = graphql`
           frontmatter {
             title
             date(formatString: "MMMM D, YYYY")
-            path
+            url
             source
           }
         }
@@ -33,10 +33,7 @@ const News = () => (
         <section className="project">
           <h1>News</h1>
           {allMarkdownRemark.edges.map(edge => (
-            <div
-              class="project-flex news-flex"
-              key={edge.node.frontmatter.path}
-            >
+            <div class="project-flex news-flex" key={edge.node.frontmatter.url}>
               <div class="news-image">
                 <img src="img/news-sample.jpg" alt="News" />
               </div>
@@ -45,7 +42,7 @@ const News = () => (
                 <h3 class="news-date">{edge.node.frontmatter.date}</h3>
                 <h3 class="news-source">{edge.node.frontmatter.source}</h3>
                 <a
-                  href={edge.node.frontmatter.path}
+                  href={edge.node.frontmatter.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

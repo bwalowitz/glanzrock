@@ -21,24 +21,29 @@
 }
 
 html,
-body {
+body,
+#___gatsby,
+#___gatsby > div {
   height: 100%;
 }
 
-body {
+body,
+#___gatsby,
+#___gatsby > div {
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
+  color: #000;
+}
+
+#___gatsby > div {
+  height: 100%;
 }
 .content {
   flex: 1 0 auto;
 }
 .footer {
   flex-shrink: 0;
-}
-
-body {
-  font-family: sans-serif;
-  color: #000;
 }
 
 img {
@@ -727,7 +732,7 @@ textarea {
 }
 
 .content.contact {
-  background-image: url(../images/Nebula_00326_bg2_web.jpg);
+  background-image: url("../images/Nebula_00326_bg2_web.jpg");
   background-size: fill;
   background-repeat: no-repeat;
   background-position: center;

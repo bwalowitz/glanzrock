@@ -11,11 +11,14 @@ const Contact = () => (
       <section className="project contact">
         {/* <h1>Contact</h1> */}
 
-        <form method="POST" action="https://formspree.io/bwalowitz@gmail.com">
+        <form
+          method="POST"
+          netlify="true"
+          name="contact"
+          netlify-honeypot="bot-field"
+        >
           <h2>Get in touch with us</h2>
-          {/* <div className="hpot">
-        <label>Leave this field empty: <input name="_next"></label>
-      </div> */}
+          <input name="bot-field" type="text" style={{ display: "none" }} />
           <input type="hidden" name="_next" value="/contact-thanks.html" />
           <input
             name="name"
