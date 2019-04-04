@@ -8,6 +8,7 @@ credits:
   - Written by Someone Else
 category: Documentary
 images:
+  - /img/tentcity-poster.png
   - /img/julian-zett-643140-unsplash.jpg
 ---
 
