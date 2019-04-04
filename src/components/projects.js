@@ -31,7 +31,7 @@ const Projects = () => (
           {allMarkdownRemark.edges.map(edge => (
             <figure className="item" key={edge.node.frontmatter.slug}>
               <Link to={`/projects/${edge.node.frontmatter.slug}`}>
-                <img src="images/tentcity-poster.png" alt="poster" />
+                <img src={edge.node.frontmatter.poster} alt="poster" />
                 <figcaption className="item-caption">
                   <p>{edge.node.frontmatter.title}</p>
                 </figcaption>
