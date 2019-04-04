@@ -20,7 +20,6 @@ const Contact = () => (
         >
           <h2>Get in touch with us</h2>
           <input name="bot-field" type="text" style={{ display: "none" }} />
-          <input type="hidden" name="_next" value="/contact-thanks.html" />
           <input
             name="name"
             type="text"
