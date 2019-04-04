@@ -11,9 +11,15 @@ collections:
     label: "Projects"
     folder: "src/projects"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
     fields:
       - { label: "Project Title", name: "title", widget: "string" }
+      - {
+          label: "Project Slug",
+          name: "slug",
+          widget: "string",
+          hint: "The URL of the project, for example: tent-city",
+        }
       - { label: "Project Intro", name: "intro", widget: "text" }
       - { label: "Project Description", name: "description", widget: "text" }
       - { label: "Project Poster", name: "poster", widget: "image" }
