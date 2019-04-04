@@ -1,15 +1,14 @@
 ---
-title: "Tent City"
-intro: "Some intro text"
-slug: "tent-city"
-category: "Documentary"
-poster:
-  - /img/julian-zett-643140-unsplash.jpg
+title: Tent City
+intro: Some intro text
+description: This is a description
+poster: /img/tentcity-poster.png
 credits:
   - Directed by Ken Rogers
   - Written by Someone Else
+category: Documentary
 images:
+  - /img/tentcity-poster.png
   - /img/julian-zett-643140-unsplash.jpg
 ---
 
-This is the body for some more info about the movie.
