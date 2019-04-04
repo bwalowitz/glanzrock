@@ -8,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 import "./reset.css";
 import "./layout.css";
@@ -23,7 +24,20 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => <>{children}</>}
+    render={data => (
+      <>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: "description",
+              content: data.site.siteMetadata.description
+            }
+          ]}
+        />
+        {children}
+      </>
+    )}
   />
 );
 
