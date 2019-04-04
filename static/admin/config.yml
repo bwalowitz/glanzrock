@@ -1,0 +1,38 @@
+backend:
+  name: github
+  branch: gatsby-cms
+  repo: bwalowitz/glanzrock
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Project Intro", name: "intro", widget: "text" }
+      - { label: "Project Description", name: "description", widget: "text" }
+      - { label: "Project Poster", name: "poster", widget: "image" }
+      - label: "Credits"
+        name: "credits"
+        widget: "list"
+        field: { label: Credit, name: credit, widget: string }
+      - { label: "Project Category", name: "category", widget: "string" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: { label: Image, name: image, widget: image }
+  - name: "news"
+    label: "News"
+    folder: "src/news"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "News Article Title", name: "title", widget: "string" }
+      - { label: "News Article Source", name: "source", widget: "string" }
+      - { label: "News Article URL", name: "url", widget: "string" }
+      - { label: "News Article Image", name: "image", widget: "image" }
