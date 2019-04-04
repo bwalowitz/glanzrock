@@ -16,6 +16,7 @@ const Contact = () => (
           netlify="true"
           name="contact"
           netlify-honeypot="bot-field"
+          action="/thanks"
         >
           <h2>Get in touch with us</h2>
           <input name="bot-field" type="text" style={{ display: "none" }} />
