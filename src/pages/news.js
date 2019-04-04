@@ -17,6 +17,7 @@ const ALL_NEWS_QUERY = graphql`
             date
             url
             source
+            image
           }
         }
       }
@@ -35,7 +36,7 @@ const News = () => (
           {allMarkdownRemark.edges.map(edge => (
             <div class="project-flex news-flex" key={edge.node.frontmatter.url}>
               <div class="news-image">
-                <img src="img/news-sample.jpg" alt="News" />
+                <img src={edge.node.frontmatter.image} alt="News" />
               </div>
 
               <div class="news-text">
