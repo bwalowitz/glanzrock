@@ -45,7 +45,7 @@ export default class projectLayout extends Component {
     return (
       <Layout>
         <Header />
-        <section className="project">
+        <section className="project content">
           <div className="project-flex">
             <div className="project-text">
               <h2>{markdownRemark.frontmatter.title}</h2>

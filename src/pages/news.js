@@ -31,7 +31,7 @@ const News = () => (
     <StaticQuery
       query={ALL_NEWS_QUERY}
       render={({ allMarkdownRemark }) => (
-        <section className="project">
+        <section className="project content">
           <h1>News</h1>
           {allMarkdownRemark.edges.map(edge => (
             <div class="project-flex news-flex" key={edge.node.frontmatter.url}>
