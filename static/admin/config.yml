@@ -21,13 +21,23 @@ collections:
           hint: "The URL of the project, for example: tent-city",
         }
       - { label: "Project Intro", name: "intro", widget: "text" }
-      - { label: "Project Description", name: "description", widget: "text" }
+      - {
+          label: "Project Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
       - { label: "Project Poster", name: "poster", widget: "image" }
       - label: "Credits"
         name: "credits"
         widget: "list"
         field: { label: Credit, name: credit, widget: string }
-      - { label: "Project Category", name: "category", widget: "string" }
+      - {
+          label: "Project Category",
+          name: "category",
+          widget: "string",
+          required: false,
+        }
       - label: "Images"
         name: "images"
         widget: "list"
