@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
   repo: bwalowitz/glanzrock
-
+logo_url: https://d33wubrfki0l68.cloudfront.net/1f4ce04369d08e4f8c3a7ca30a11c4873fda2ae1/3cf4e/static/netlify-cms-logo-5a5d3304b7d2d77ea281363a71dcc970.svg
 media_folder: static/img
 public_folder: /img
 
@@ -27,7 +27,7 @@ collections:
           widget: "text",
           required: false,
         }
-      - { label: "Project Poster", name: "poster", widget: "image" }
+      - { label: "Project Poster", name: "poster", widget: "image", hint: "Upload JPG sized: 433px wide by 640px tall. Main project thumbnail will be featured in the Home Page Projects section", }
       - label: "Credits"
         name: "credits"
         widget: "list"
@@ -41,6 +41,7 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
+        hint: "First image needs to be the same thumbnail poster from above. Additional images can be added."
         field: { label: Image, name: image, widget: image }
   - name: "news"
     label: "News"
