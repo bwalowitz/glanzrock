@@ -33,7 +33,7 @@ const IndexPage = () => (
       </section>
     </div>
 
-    {/* <Projects />  */}
+    <Projects /> 
     <Footer />
   </Layout>
 );
