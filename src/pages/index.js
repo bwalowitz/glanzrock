@@ -6,7 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Projects from "../components/projects";
 
-import glanzrock3dBg from "../images/glanzrock-3d-bg.jpg";
+// import glanzrock3dBg from "../images/glanzrock-3d-bg.jpg";
 
 const IndexPage = () => (
   <Layout>
