@@ -11,9 +11,9 @@ const Header = () => (
           <img src={glanzrockNameWhite} alt="glanzrock" />
         </Link>
         <nav>
-          <Link to="/#projects">Projects</Link>
+          {/* <Link to="/#projects">Projects</Link> */}
           <Link to="/about">About</Link>
-          <Link to="/news">News</Link>
+          {/* <Link to="/news">News</Link> */}
           <Link to="/contact">Contact</Link>
         </nav>
       </header>
