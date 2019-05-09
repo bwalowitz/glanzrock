@@ -99,6 +99,7 @@ export const query = graphql`
       frontmatter {
         title
         intro
+        description
         slug
         poster
         credits

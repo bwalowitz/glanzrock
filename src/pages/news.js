@@ -9,6 +9,7 @@ const ALL_NEWS_QUERY = graphql`
   query AllNewsQuery {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(news)/.*.md$/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {

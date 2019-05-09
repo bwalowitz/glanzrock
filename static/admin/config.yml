@@ -27,7 +27,12 @@ collections:
           widget: "text",
           required: false,
         }
-      - { label: "Project Poster", name: "poster", widget: "image", hint: "Upload JPG sized: 433px wide by 640px tall. Main project thumbnail will be featured in the Home Page Projects section", }
+      - {
+          label: "Project Poster",
+          name: "poster",
+          widget: "image",
+          hint: "Upload JPG sized: 433px wide by 640px tall. Main project thumbnail will be featured in the Home Page Projects section",
+        }
       - label: "Credits"
         name: "credits"
         widget: "list"
