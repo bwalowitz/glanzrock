@@ -3,6 +3,7 @@ title: Tent City Test
 slug: tent-city
 intro: Some intro text
 description: This is a description
+order: 1
 poster: /img/tentcity-poster.png
 credits:
   - Directed by Ken Rogers

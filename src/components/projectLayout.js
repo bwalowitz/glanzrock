@@ -98,6 +98,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        order
         intro
         description
         slug

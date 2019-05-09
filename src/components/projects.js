@@ -5,12 +5,14 @@ const ALL_PROJECTS_QUERY = graphql`
   query AllProjectsQuery {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(projects)/.*.md$/" } }
+      sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {
         node {
           html
           frontmatter {
             title
+            order
             intro
             slug
             poster

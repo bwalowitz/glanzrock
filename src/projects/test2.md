@@ -1,5 +1,6 @@
 ---
 title: Test
+order: 2
 slug: test2
 intro: Here it is
 description: You love it
